@@ -1,0 +1,95 @@
+{
+  "name": "@cobbl-ai/feedback-widget",
+  "version": "0.1.0",
+  "description": "Embeddable feedback widget for Cobbl - collect user feedback on prompt runs",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "unpkg": "dist/cobbl-feedback-widget.global.js",
+  "jsdelivr": "dist/cobbl-feedback-widget.global.js",
+  "files": [
+    "dist/**/*",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./react": {
+      "import": {
+        "types": "./dist/react.d.mts",
+        "default": "./dist/react.mjs"
+      },
+      "require": {
+        "types": "./dist/react.d.ts",
+        "default": "./dist/react.js"
+      }
+    },
+    "./browser": {
+      "default": "./dist/cobbl-feedback-widget.global.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsup && cp src/react.d.ts dist/react.d.ts && cp src/react.d.ts dist/react.d.mts",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "pnpm clean && pnpm build"
+  },
+  "keywords": [
+    "cobbl",
+    "feedback",
+    "widget",
+    "preact",
+    "llm",
+    "prompt",
+    "promptops"
+  ],
+  "author": "Cobbl",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "preact": "^10.24.3"
+  },
+  "devDependencies": {
+    "@radix-ui/react-select": "^2.1.2",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-tabs": "^1.1.1",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^4.7.0",
+    "autoprefixer": "^10.4.20",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.460.0",
+    "postcss": "^8.4.47",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss": "^3.4.14",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0",
+    "vite": "^6.4.1"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

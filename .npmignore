@@ -1,0 +1,27 @@
+# Development files (not published to npm)
+dev/
+src/
+example.html
+example-react.tsx
+
+# Config files
+vite.config.ts
+tsconfig.json
+tsup.config.ts
+.editorconfig
+
+# Documentation (except README.md)
+*.md
+!README.md
+
+# Git
+.git
+.gitignore
+
+# Node
+node_modules/
+
+# Build artifacts
+*.log
+*.tsbuildinfo
+.DS_Store
