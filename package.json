@@ -41,7 +41,8 @@
     "build": "tsup && cp src/react.d.ts dist/react.d.ts && cp src/react.d.ts dist/react.d.mts",
     "typecheck": "tsc --noEmit",
     "clean": "rm -rf dist",
-    "prepublishOnly": "pnpm clean && pnpm build"
+    "prepublishOnly": "pnpm clean && pnpm build",
+    "release": "bash scripts/release.sh"
   },
   "keywords": [
     "cobbl",
