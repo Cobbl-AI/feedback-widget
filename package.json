@@ -55,6 +55,14 @@
   ],
   "author": "Cobbl",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cobbl-AI/feedback-widget.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Cobbl-AI/feedback-widget/issues"
+  },
+  "homepage": "https://github.com/Cobbl-AI/feedback-widget#readme",
   "engines": {
     "node": ">=18.0.0"
   },
